@@ -20,7 +20,7 @@ sjmp {
         publication {
             artifactId = "bare-graphql"
             groupId = "net.mbonnin.bare-graphql"
-            version = "0.0.1-SNAPSHOT"
+            version = "0.0.1"
             simplePom {
                 name = "bare-graphql"
                 githubRepository = "martinbonnin/bare-graphql"
