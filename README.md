@@ -27,7 +27,9 @@ val query = """
 
 val headers = mapOf("Authorization" to "bearer $token")
 
-println(graphql(operation = query, headers = headers)["data"].asMap["repository"].asMap["description"])
+val description = graphql(operation = query, headers = headers)["data"].asMap["repository"].asMap["description"]
+
+println(description)
 // "a **very small** set of APIs to execute GraphQL in a completely unsafe manner"
 ```
 
@@ -49,6 +51,8 @@ val variables = mapOf(
     "name" to "bare-graphql",
 )
 
-println(graphql(query, headers, variables)["data"].asMap["repository"].asMap["id"])
+val description = graphql(operation = query, variables = variables, headers = headers)["data"].asMap["repository"].asMap["description"]
+
+println(description)
 // "a **very small** set of APIs to execute GraphQL in a completely unsafe manner"
 ```
