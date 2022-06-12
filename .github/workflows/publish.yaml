@@ -1,4 +1,4 @@
-name: CI
+name: publish
 
 on:
   push:
@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: gradle/gradle-build-action@v2
-      - name: Run the CI task
-        run: ./gradlew sjmpPublishIfNeeded
+      - run: ./gradlew sjmpPublishIfNeeded
         env:
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
           OSSRH_USER: ${{ secrets.OSSRH_USER }}
