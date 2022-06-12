@@ -1,6 +1,8 @@
 # bare-graphql ⚛️
 
-Bare GraphQL is a **very small** set of APIs to execute GraphQL in a completely unsafe manner from [Kotlin scripts](https://kotlinlang.org/docs/custom-script-deps-tutorial.html)
+Bare GraphQL is a **very small** set of APIs to execute GraphQL in a completely unsafe manner. 
+
+Mainly made to be used from [Kotlin scripts](https://kotlinlang.org/docs/custom-script-deps-tutorial.html) like [update-graphql-schema.main.kts](https://github.com/apollographql/update-graphql-schema/blob/main/update-schema.main.kts#L125)
 
 For other projects, [Apollo Kotlin](https://github.com/apollographql/apollo-kotlin) provides codegen and way more compile time guarantees
 
