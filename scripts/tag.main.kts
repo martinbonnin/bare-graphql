@@ -65,7 +65,7 @@ fun runCommand(vararg args: String): String {
 fun setDocVersion(version: String) {
     val readme = File("README.md")
     readme.writeText(
-        readme.readText().replace(Regex("\"net.mbonnin.xoxo:xoxo:[^\"].*\""), "\"net.mbonnin.xoxo:xoxo:$version\"")
+        readme.readText().replace(Regex("\"net.mbonnin.bare-graphql:bare-graphql:[^\"].*\""), "\"net.mbonnin.bare-graphql:bare-graphql:$version\"")
     )
 }
 
