@@ -56,3 +56,5 @@ val description = graphql(operation = query, variables = variables, headers = he
 println(description)
 // "a **very small** set of APIs to execute GraphQL in a completely unsafe manner"
 ```
+
+That's it :) 
