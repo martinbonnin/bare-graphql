@@ -11,7 +11,7 @@ fun String.escape() = this.replace("\"", "\\\"")
 
 fun variable(name: String) = "${'$'}$name"
 
-fun graphQL(operation: String, variables: Map<String, String> = emptyMap(), headers: Map<String, String> = emptyMap()): Map<String, Any?> {
+fun graphQL(url: String, operation: String, variables: Map<String, String> = emptyMap(), headers: Map<String, String> = emptyMap()): Map<String, Any?> {
     val response = mapOf(
         "query" to operation,
         "variables" to variables
@@ -19,7 +19,7 @@ fun graphQL(operation: String, variables: Map<String, String> = emptyMap(), head
         .let {
             Request.Builder()
                 .post(it.toRequestBody("application/graphql+json".toMediaType()))
-                .url("https://api.github.com/graphql")
+                .url(url)
                 .build()
         }
         .let {
