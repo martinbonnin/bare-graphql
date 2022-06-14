@@ -9,7 +9,7 @@ For other projects, [Apollo Kotlin](https://github.com/apollographql/apollo-kotl
 ## Installation
 
 ```kotlin
-@file:DependsOn("net.mbonnin.bare-graphql:bare-graphql:0.0.1")
+@file:DependsOn("net.mbonnin.bare-graphql:bare-graphql:0.0.2")
 ```
 
 ## Usage
