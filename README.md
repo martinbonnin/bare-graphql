@@ -27,7 +27,7 @@ val query = """
 
 val headers = mapOf("Authorization" to "bearer $token")
 
-val description = graphql(
+val description = graphQL(
     url = "https://api.github.com/graphql",
     operation = query, 
     headers = headers
@@ -55,7 +55,7 @@ val variables = mapOf(
     "name" to "bare-graphql",
 )
 
-val description = graphql(
+val description = graphQL(
     url = "https://api.github.com/graphql",
     operation = query,
     headers = headers
