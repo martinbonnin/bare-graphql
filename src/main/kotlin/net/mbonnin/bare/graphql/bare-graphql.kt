@@ -11,7 +11,12 @@ fun String.escape() = this.replace("\"", "\\\"")
 
 fun variable(name: String) = "${'$'}$name"
 
+@Deprecated("use graphql instead", ReplaceWith("graphql(url, operation, variable, headers"))
 fun graphQL(url: String, operation: String, variables: Map<String, String> = emptyMap(), headers: Map<String, String> = emptyMap()): Map<String, Any?> {
+    return graphql(url, operation, variables, headers)
+}
+
+fun graphql(url: String, operation: String, variables: Map<String, Any?> = emptyMap(), headers: Map<String, String> = emptyMap()): Map<String, Any?> {
     val response = mapOf(
         "query" to operation,
         "variables" to variables
